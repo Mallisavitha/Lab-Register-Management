@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="staff1.css">
+</head>
+<body>
+    <div class="container">
+        <form  action="staff_data.php" method="POST"  id="loginForm"  enctype="multipart/form-data">
+            <div class="title">STAFF</div>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="text" name="regno" placeholder="ID Number" required>
+                
+                </div> 
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="text" name="name" placeholder="Name" required>
+                </div> 
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="text" name="departmentYear" placeholder="Department & Year" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="text" name="purpose" placeholder="Purpose" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="text" name="systemnumber" placeholder="System Number" required>
+                </div>
+                <!-- Add a hidden input field to store the client-side time -->
+                <input type="hidden" id="clientTime" name="clientTime">
+            </div>
+            <div class="button">
+                <button type="cancel" value="Cancel">Cancel</button> 
+            </div>
+            <div class="button1">
+                <button type="button" onclick="captureClientTime()">Submit</button>
+            </div>
+        </form> 
+    </div>
+
+    <!-- JavaScript to capture client-side time -->
+    <script>
+        function captureClientTime() {
+            // Capture client-side time
+            var clientTime = new Date().toLocaleString();
+            
+            // Update the hidden field with client-side time
+            document.getElementById('clientTime').value = clientTime;
+
+            // Submit the form
+            document.getElementById('loginForm').submit();
+        }
+    </script>
+</body>
+</html>

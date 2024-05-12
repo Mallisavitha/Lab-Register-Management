@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <div class="container">
+        <form action="help_data.php" method="POST" id="loginForm">
+            <h1>Query</h1>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">System Number</span>
+                    <input type="text" name="systemnumber" required>
+                </div> 
+                <div class="input-box">
+                    <span class="details">Technical issue</span>
+                    <textarea id="msg" name="technical_issue" rows="5" cols="5" required> 
+                    </textarea> 
+                </div>
+                <div class="input-box">
+                    <span class="details">Feedback(optional)</span>
+                    <textarea id="msg" name="feedback" rows="5" cols="5"> 
+                    </textarea> 
+                </div>
+            </div>
+            <button type="submit" > Submit </button> 
+        </form>
+    </div>
+</body>
+</html>
